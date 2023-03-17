@@ -1,0 +1,497 @@
+//3 thẻ đặt ở head
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"> //Hỗ trợ bootstrap 5.2.1
+	<meta name="viewport" content="width=device-width, initial-scale=1">  //Cân chỉnh ưu tiên thiết bị di động, width thiết lập chiều rộng tuân theo theo chiều rộng của màn hình, scale=1: đặt mức thu phóng ban đầu khi trang được tải lần đầu.
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script> //Hỗ trợ javascript
+//https://fontawesome.com/v5/icons/shopping-cart?s=solid&f=classic link cho các icon
+//Favicon: tạo nên ký hiệu... Trên cùng với tên của web
+//Để thêm 1 giá trị css ta dùng style="height:50px"
+//class="container"   //vùng chứa có chiều rộng cố định đáp ứng //center
+//class="container-fluid" //vùng chứa có chiều rộng đầy đủ , mở rộng toàn bộ chiều rộng(100%) của khung nhìn
+//Bootstrap 5 sử dụng mặc định font-sizelà 1rem (16px theo mặc định) và giá trị của nó line-heightlà 1,5.
+//Tất cả các <p>phần tử đều có margin-top: 0 và margin-bottom: 1rem(16px theo mặc định).
+//.d-flex: có thể hiểu như là thừa kế từ lớp cha
+<div class="container p-5 my-5 bg-primary text-white"></div>
+<!-- Property -->
+m: margin
+p: padding (nếu chỉ p or m riêng thì nó là padding or margin on all sides)
+  sides:
+    t: top (mt-* và pt-*)
+    b: bottom
+    s: left
+    e: right
+    x: left and right
+    y top and bottom
+    bland: cả 4 vùng
+  size:
+    0->5(0, 0.25, 0.5, 1, 1.5, 3rem) và auto
+//bg-primary là backgourd của vùng chứa
+//text-white là màu chữ
+<div class="row"> //Dong
+    <div class="col">Day la cot</div>
+    <div class="col">Day la cot</div>
+</div>
+//Số cột trong bootstrap của 1 row được chia làm 12 phần col-* ,* là số phần được chia.
+
+<!-- -------Tiêu đề------- -->
+//Các tiêu đề có thể được xem là 1 class(class="h1" gắn trong 1 thẻ p)
+//Tiêu đề lớn hơn là h1. <h1 class="display-1"></h1> //Giá trị từ 1 đến 6
+//Thẻ <small></small> or .class để tạo 1 phần văn bản nhỏ hơn(văn bản phụ) trong 1 tiêu đề
+//<mark></mark> hoặc .mark tạo highlight nền vàng cho chữ
+//<abbr title="World Health Organization">WHO</abbr>Tạo đường viền chấm dưới cùng và con trỏ có dấu chấm hỏi khi di chuột:
+<blockquote class="blockquote">
+    <p>Tạo trích dẫn các khối nội dung từ một nguồn khác</p>
+    <footer class="blockquote-footer">From WWF's website</footer>//Trích dẫn từ nguồn
+    <abbr title="World Health Organization" class="initialism">WHO</abbr>//Với class initialism 
+</blockquote>
+
+<dl>
+    <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drink</dd>
+</dl> //Thẻ dt in đậm chữ (kiểu 1 chủ đề về nội dung bên trong nó)
+
+<code>Đây là thẻ dùng in hồng chữ</code>
+<kbd>Tạo nền chữ đen</kbd>
+<pre>Đây là thẻ tạo không gian chứa cả ngắt dòng và các     space</pre>
+.lead: làm nổi bật 1 đoạn văn bản
+.text-start: căn trái văn bản
+.text-end: căn phải văn bản
+.text-center: căn giữa văn bản
+.text-nowrap: No wrap text.(Cho biết văn bản không có bao bọc)
+.text-break: Ngăn cho văn bản không bị vỡ bố cục trong 1 trang web(Nếu thu web chữ tự xuống dòng)
+.text-decoration-none: xoá gạch chân khỏi một đường link
+.text-lowercase: chữ thường toàn bộ
+.text-uppercase: VIẾT HOA TOÀN BỘ
+.text-capitalize: Chỉ Viết Hoa Chữ Cái Đầu Của Mỗi Từ
+
+<ul class="list-unstyled">
+    <li>Coffee</li>
+    <li>Tea
+      <ul>
+        <li>Black tea</li>
+        <li>Green tea</li>
+      </ul>
+    </li>
+    <li>Milk</li>
+  </ul>
+.list-unstyled: Loại bỏ kiểu danh sách mặc định và lề trái trên các mục danh sách 
+  (hoạt động trên cả <ul> và <ol>). Lớp này chỉ áp dụng cho các mục danh sách con ngay lập tức 
+    (để xóa kiểu danh sách mặc định khỏi bất kỳ danh sách lồng nhau nào, 
+    hãy áp dụng lớp này cho mọi danh sách lồng nhau)
+<ul class="list-inline">
+        <li class="list-inline-item">Coffee</li>
+        <li class="list-inline-item">Tea</li>
+        <li class="list-inline-item">Milk</li>
+      </ul>
+.list-inline: Đặt tất cả các mục trong danh sách trên một dòng (được sử dụng cùng với .list-inline-item trên mỗi phần tử <li>)
+
+<!-- -------Màu sắc------- -->
+.text-muted: This text is muted.
+.text-primary: This text is important.
+.text-success: This text indicates success.
+.text-info: This text represents some information.
+.text-warning: This text represents a warning.
+.text-danger: This text represents danger.
+.text-secondary: Secondary text.
+.text-white: This text is white (on white background).
+.text-dark: This text is dark grey.
+.text-body (default body color/often black): 
+.text-light: This text is light grey (on white background).
+//.text-black-*: thêm độ mờ cho văn bản
+<div class="bg-primary"></div>
+<div class="bg-success"></div>
+<div class="bg-info p-3"></div>
+<div class="bg-warning p-3"></div>
+<div class="bg-danger p-3"></div>
+<div class="bg-secondary p-3"></div>
+<div class="bg-dark p-3"></div>
+<div class="bg-light p-3"></div>
+//Đây là các màu cho nền thêm text để được màu phù hợp với các backgourd. text-bg-primary
+
+<!-- -------Table------- -->
+<table class="table">
+    <thead> //Đây là tên của một cột ở dòng đầu
+        <tr> //Đây là 1 dòng
+            <th>Đây là một cột</th>
+        </tr>
+    </thead>
+    <tbody>//Các giá trị trong 1 table
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<table class="table table-striped"></table> Đây là bảng với các dòng sọc sen kẻ
+<table class="table table-bordered"></table> Đây là bảng có đường viền toàn diện trên các mặt
+<table class="table table-hover"></table> Lớp thêm hiệu ứng khi di chuyển(màu xám)
+<table class="table table-dark"></table> Lớp bảng nền đen
+<table class="table table-borderless"></table> Lớp loại bỏ các đường viền khỏi bảng
+.align-middle: Giúp căn giữa văn bản khi ch`iều cao không đều
+//Có thểm thêm .table-màu vào thẻ tr hoặc thẻ thead để tạo nền cho mỗi dòng gồm:
+<!--Màu:
+-Primary
+-Success
+-Danger
+-Info
+-Warning
+-Active
+-Secondary
+-Light
+-Dark
+-Mute
+-Link
+-->
+//Lớp .table-sm làm cho bảng nhỏ hơn bằng cách cắt phần đệm ô làm đôi:
+//Lớp .table-responsive thêm một thanh cuộn vào bảng khi cần thiết (khi nó quá lớn theo chiều ngang)
+
+<!-- -------Image------- -->
+.rounded: thêm các góc tròn vào hình ảnh
+vd: <img src="cinqueterre.jpg" class="rounded" alt="Cinque Terre" width="304" height="236">
+//alt: là thẻ dùng để mô tả hình ảnh
+.rounded-circle: nắn hình ảnh thành hình tròn
+.img-thumbnail: định hình hình ảnh thành hình thu nhỏ (có viền)
+.float-start: căn hình ảnh sang trái, .float-end: căng hình ảnh sang phải
+."mx-auto d-block": Căn giữa hình ảnh(margin: auto) (display: block)
+.img-fluid: hình ảnh sẽ được thay đổi phù hợp với phần tử cha
+
+<!-- -------Jumbotron------- -->
+class="mt-4 p-5 bg-primary text-white rounded
+
+<!-- -------Alerts------- -->
+class="alert alert-màu" : Hộp thoại thông báo với màu sắc thay đổi
+<div class="alert alert-màu">
+    <strong>Warning!</strong> You should <a href="#" class="alert-link">read this message</a>.
+    //.alert-link: Hiển thị 1 link trong hộp thoại trong báo
+    //Thẻ strong tương ứng với thẻ b
+<div class="alert alert-màu alert-dismissible fade show">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    //.alert-dismissible, .btn-close và data-bs-dismiss="alert": để tạo nút đóng ở hợp thông báo
+    .fade và show: hiệu ứng khi đóng mờ dần.
+
+<!-- -------Buttons------- -->
+<button type="button" class="btn btn-link">Button</button> //btn-màu (thêm link và không có -Active)
+//Tương tự như button, một số thẻ có thể dùng:
+<a href="#" class="btn btn-success">Link Button</a>
+<input type="button" class="btn btn-success" value="Input Button">
+<input type="submit" class="btn btn-success" value="Submit Button">
+<input type="reset" class="btn btn-success" value="Reset Button">
+.btn btn-outline-màu: để thêm viền cho button
+.btn-*: <!--      lg,md,sm là 3 giá trị kích thước    -->  của button
+<div class="d-grid">
+    <button type="button" class="btn btn-primary btn-block">Full-Width Button</button>
+  </div> //Để tạo một nút mức khối kéo dài toàn bộ chiều rộng của phần tử mẹ ta dùng .d-grid ở phần tử mẹ
+<div class="d-grid gap-3">  //Dùng .gap-* để kiểm soát khoảng cách giữa các button
+//Các button dạng hoạt động hoặc bị vô hiệu hoá
+    <button type="button" class="btn btn-primary">Primary Button</button>
+    <button type="button" class="btn btn-primary active">Active Primary</button>
+    <button type="button" class="btn btn-primary" disabled>Disabled Primary</button>
+    <a href="#" class="btn btn-primary disabled">Disabled Link</a>
+//Button dạng đang tải(loading)
+    <button class="btn btn-primary">
+        <span class="spinner-border spinner-border-sm(Đây là kích thước của ký hiệu loading)"></span>
+        Loading..//Dang spinner(xoay tròn)
+    </button>
+    <button class="btn btn-primary" disabled>
+        <span class="spinner-grow spinner-grow-sm"></span>
+        Loading..//Dạng chấm tròn
+    </button>
+
+<!-- -------Button Groups------- -->
+.btn-group-*: nhóm các nút lại với nhau theo chiều ngang, * là kích thước
+<div class="btn-group">
+    <button type="button" class="btn btn-primary">Apple</button>
+    <button type="button" class="btn btn-primary">Samsung</button>
+    <button type="button" class="btn btn-primary">Sony</button>
+  </div>
+.btn-group-vertical: tạo các nút theo chiều dọc
+//Tạo dropdown cho 1 group button
+<div class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Tablet</a>
+      <a class="dropdown-item" href="#">Smartphone</a>
+    </div>
+  </div>
+
+  <!-- -------Badges(Huy hiệu, Danh hiệu)------- -->
+  <h3>Example heading <span class="badge bg-màu">New</span></h3>: Tạo một badge phù hợp với thẻ h3
+  .rounded-pill: thêm lớp vào thẻ span để làm cho các huy hiệu tròn hơn
+  //
+  <button type="button" class="btn btn-primary">
+    Messages <span class="badge bg-danger">4</span>//Tạo 1 badge bên trong 1 button(hiển thị số tin nhắn chưa đọc)
+  </button>
+
+<!-- -------Progress Bars------- -->
+<div class="progress" style="height:10px"> //Nếu khôg dùng height thì mặc định là 16px
+    <div class="progress-bar bg-màu progress-bar-striped progress-bar-animated" style="width:40%;height:10px">Thuộc tính(Nhãn) trong thanh</div>
+  </div> //Cấu trúc tạo thanh tiến trình
+.progress-bar-striped: tạo sọc chéo cho bar
+.progress-bar-animated: Tạo hiệu ứng cho bar
+//Có thể tạo nhiều bar trog progress(Chia 1 thanh tiến trình thành nhiều phần khác nhau)
+
+<!-- -------Spinners------- -->
+<div class="spinner-border text-(màu cho spinner)"></div>
+.spinner-grow: dạng chấm tròn 
+.spinner-border-*: dạng xoay tròn, * là kích thước con quay
+
+<!-- -------Pagination(Phân trang)------- -->
+<ul class="pagination .pagination-* .justify-content-*">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+.pagination: tạo nên dòng phân trang.
+.page-item: đánh giá trị cho phần tử.
+.page-link: gắn vào liên kết.
+.active: Hiển thị trang đang ở.
+.disabled: Ngắt liên kết, làm cho liên két không sử dụng dc
+.pagination-*: Định kích cỡ pagination.
+justify-content-*: mặc định căn trái, *: center căn giữa và end căn phải, between
+//Một kiểu Pagination khác
+<ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Photos</a></li>
+    <li class="breadcrumb-item"><a href="#">Summer 2017</a></li>
+    <li class="breadcrumb-item"><a href="#">Italy</a></li>
+    <li class="breadcrumb-item active">Rome</li>
+  </ul>
+
+<!-- -------List Groups(Nhóm danh sách)------- -->
+<ul class="list-group .list-group-flush .list-group-numbered .list-group-horizontal">
+    <li class="list-group-item">First item</li>
+    <a href="#" class="list-group-item list-group-item-action">Second item</a>
+    <li class="list-group-item active">Third item</li>
+  </ul>
+.list-group: Tạo list group
+.list-group-item: Các phần tử con trong 1 list
+.list-group-item-action: Phần tử thay đổi khi rê chuột vào, thay giá trị action bằng màu ta được backgourd của mỗi item
+.active: Đánh dấu mục hiện tại
+.disabled: Vô hiệu hoá mục(Vô hiệu luôn cả 1 link trong mục đó)
+.list-group-flush: Xoá bỏ đường viền và các góc tròn ngoài
+.list-group-numbered: Tự động đánh số ở đầu cho mỗi mục
+.list-group-horizontal: Tạo list hàng ngang
+//Áp dụng
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action list-group-item-success">Success item</a>
+</div>
+//Áp dụng badge:
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Junk
+      <span class="badge bg-primary rounded-pill">99</span>
+    </li>
+  </ul>
+  
+  <!-- -------Cards(Thẻ)------- -->
+  //Cấu trúc: 
+  <div class="card .bg-màu* .text-màu">
+    <div class="card-body">
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text">Some example text.</p>
+        <a href="#" class="card-link">Card link</a>
+    </div>
+    
+  </div>
+  //Ngoài .card-body(Nội dung) còn có 2 lớp khác .card-header(Tiêu đề) và .card-footer
+//.card-title: Thêm tiêu đề vào 1 phần tử
+.card-text được sử dụng để loại bỏ các lề dưới cùng cho một phần tử <p> nếu nó là phần tử con cuối cùng (hoặc phần tử duy nhất) bên trong .card-body.
+//Hình ảnh thẻ
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="../bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="#" class="  btn-primary">See Profile</a> //Buttom
+    </div>
+    img .card-img-bottom(Ảnh nằm bên dưới)
+  </div>
+.card-img-top(Ảnh nằm bên trên) được đặt bên ngoài .card-body nhằm kéo dài toàn bộ chiều rộng.
+//Thay .card-body thành => .card-img-overlay: Biến hình ảnh thành thẻ nền và thêm văn bản lên đầu ảnh
+
+<!-- -------Dropdowns(Menu Thả Xuống)------- -->
+//Cấu trúc cơ bản:
+<div class="dropdown/dropup dropend/(dropstart text-end)  ">// dropend/dropstart thay đổi vị trí thả xuống thành bên phải/bên trái
+  //dropup: menu thả xuống sẽ dc thả ngược lên trên
+  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+    Dropdown button
+  </button>// Tạo nút khi click vào hiện thanh thả xuống
+  <ul class="dropdown-menu dropdown-menu-end">//dropdown-menu-end: thay đổi vị trí thả xuống thành bên phải(nếu ko có mặc định là trái)
+    <li><h5 class="dropdown-header">Dropdown header 1</h5></li> //.dropdown-header: Tạo 1 tiêu đề bên trong dropdown
+    <li><a class="dropdown-item" href="#">Link 1</a></li>
+    <li><a class="dropdown-item active" href="#">Link 2</a></li>
+    <li><hr class="dropdown-divider"></li> //.dropdown-divider: Tạo 1 dãy phân
+    <li><a class="dropdown-item disabled" href="#">Link 3</a></li>
+    <li><a class="dropdown-item-text" href="#">Text Link</a></li> //Tạo liên kết mặc định
+    <li><span class="dropdown-item-text">Just Text</span></li> //Thêm 1 văn bản thuần tuý
+  </ul>
+</div>
+//Nhóm dropdown
+<div class="btn-group/btn-group-vertical"> //.btn-group/btn-group-vertical nhóm các nút theo hàng ngang/dọc
+  <button type="button" class="btn btn-primary">Apple</button>
+  <button type="button" class="btn btn-primary">Samsung</button>
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Sony</button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Tablet</a></li>
+      <li><a class="dropdown-item" href="#">Smartphone</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- -------Collapse(Thu gọn)------- -->
+//Cấu trúc cơ bản:
+<button data-bs-toggle="collapse" data-bs-target="#demo">Collapsible</button> 
+  //data-bs-toggle="collapse": Kiểm soát(hiện/ẩn) nội dung có thê thu gọn
+  //data-bs-target="#id": thuộc tính để kết nối nút với nội dung có thể thu gọn
+<a href="#demo" data-bs-toggle="collapse">Collapsible</a> //Nếu dùng thẻ a ta thay data-bs-target = href.
+<div id="demo" class="collapse show"> //.collapse: chỉ ra một phần từ có thể thu gọn //.show để thay mặc định nội dung là hiển thị
+Lorem ipsum dolor text....
+</div>
+//Áp dụng button từ bootstraps ta được:
+<button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">Simple collapsible</button>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+//Tạo nhóm thu gọn(Accordion)
+<div id="accordion">
+  
+  <div class="card">
+    <div class="card-header">
+      <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+        Collapsible Group Item #1
+      </a>
+    </div>
+    <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+      <div class="card-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+      Collapsible Group Item #2
+      </a>
+    </div>
+    <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+      <div class="card-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- -------Navs(Thực đơn điều hướng)------- -->
+//Cấu trúc:
+<ul class="nav justify-content-center/end flex-column"> 
+  //.justify-content-center/end: Căn chỉnh điều hướng giữa/phải
+  //.flex-column: Tạo navs ở dạng dọc
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+//Tab:
+<ul class="nav nav-tabs nav-justified">
+  <li class="nav-item">
+      <a class="nav-link active" href="#"></a>
+  </li>
+  ...
+</ul>
+//Pills như tab thay .nav-tabs thành nav-pills
+//.nav-justified thêm lớp để giúp các tab/pills bằng với wi dth
+//Tab/pills có Dropdown:
+<ul class="nav nav-tabs/pills">
+  <li class="nav-item">
+    <a class="nav-link active" data-bs-toggle="tab/pills" href="#">Active</a> //.data-bs-toggle: Làm cho các tab/pills có thể chuyển động
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Dropdown</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Link 1</a></li>
+      <li><a class="dropdown-item" href="#">Link 2</a></li>
+      <li><a class="dropdown-item" href="#">Link 3</a></li>
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+
+<!-- -------Navbars(Thanh điều hướng)------- -->
+//Đối với navbars, đây là thanh điều hướng được làm ở đầu trang, navbars được đặt ở trước thẻ <div .container>
+//Có thể dùng .Active/...
+//Cấu trúc:
+<nav class="navbar navbar-expand-sm bg-màu navbar-light/dark justify-content-center"> 
+  //Xoá .navbar-expand-sm để tạo thành thanh điều hướng dạng dọc
+  //.justify-content-center: đưa thanh điều hướng vào giữa.
+  //.narbar-light/dark hỗ trợ thay đổi màu chữ trắng/đen
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+//Logo: 
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top sticky-top">
+  //.fixed-top/bottom: giúp thanh navbar được giữ cố định ở đầu/cuối trang
+  //.sticky-top: Làm cho thanh điều hướng cố định/ở đầu trang khi cuộn qua nó
+                  ,thường lớp này được dùng khi có thêm phần thông tin9<div>) hoặc tiêu đề,... ở trước navbar(tương ứng với position:relative)
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Logo
+      //Để thay logo thành hình ảnh ta chèn thêm thẻ img:
+      <img src="logo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill"> 
+    </a>//Dùng .navbar-brand để làm nổi bật navbar
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>//Tạo nút để thả xuống các phần từ xuống khi chiều rộng màn hình không đủ chứa
+                (Bỏ navbar-expand-sm để các phần tử luôn là nút thả)
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+        	<span class="navbar-text">Đây là văn bản thuần tuý</span>
+        </li>
+      </ul>
+      <form class="d-flex"> //Tạo thanh tìm kiếm
+        <input class="form-control me-2" type="text" placeholder="Search"> //me-2 là khoảng cách với bên phải
+                          //placeholder: là nơi điền giá trị mẫu.
+        <button class="btn btn-primary" type="button">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- -------Carousel(Trình chiều, băng chuyền)------- -->
+
+
+
+<button type="button" class="btn-close"></button>
+<button type="button" class="close">&times;</button>

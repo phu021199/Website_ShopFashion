@@ -1,0 +1,8 @@
+Tài khoản admin: admin
+Mật khẩu admin: tonphu123
+Tài khoản khách hàng: ntphu(có thể tự tạo tài khoản đăng nhập)
+Mật khẩu khách hàng: Az123456
+web quản lý:
+localhost/b1706628/quan_ly/index.php
+web trang bán hàng:
+localhost/b1706628/khach_hang/index.php

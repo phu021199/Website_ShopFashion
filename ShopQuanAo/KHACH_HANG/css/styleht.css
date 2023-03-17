@@ -1,0 +1,16 @@
+.col-img{
+	width: 600px;
+}
+.main-ht{
+	margin-top: 50px;
+}
+.h1-ht{
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+hr.solid {
+	border-top: 1.5px solid #bbb;
+  }
+.from-control{
+	width:20px;
+}

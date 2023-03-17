@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<title>Shop Quần Áo Online</title>
+	<meta charset='UTF-8' />
+    <link rel="icon" type="image/x-icon" href="image/fa2.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center" style="font-size:13px;">
+		<ul class="navbar-nav">
+		  <li class="nav-item">
+			<a class="nav-link" href="#">Tra cứu đơn hàng</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">Rỗng</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#">Hotline: 0326567709</a>
+		  </li>
+		</ul>
+	  </nav>
+	  <!-- Đây là thanh điều hướng -->
+	  <nav class="navbar navbar-expand-sm justify-content-center sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href=""><img src="image/fa2.jpg" alt="Avatar Logo" style="width:40px;" class="rounded-pill"> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)"><b>Link 1</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)"><b>Link 2</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)"><b>Link 3</b></a>
+              </li>
+            </ul>
+            <form class="d-flex" >
+              <input class="form-control me-2" type="text" placeholder="Tìm kiếm">
+              <button class="btn btn-dark" style="width:130px;" type="button">Tìm kiếm</button>
+            </form>
+          	</div>
+        </div>
+    </nav>
+	<div class="container-fluid" style="height:1500px"></div>
+	</div>
+
+<!-- <section class="phandau">
+<header class="logo" >
+	<a href="?option=home"><img src="Image/img.jpg"></a>
+	<a class="lienhe"><b>Email:Buonbandienthoai@gmail.com<br>Tel:0326567709</b></a>
+</header></section>
+	<section class="timkiem">
+		<form>
+			<input type="hidden" name="option" value="home">
+			<input class="nhap" type="search" name="keyword"> <input class="search" type="submit" value="Tìm Kiếm">
+		</form>
+	</section>
+	<nav>
+		<button><a class="dropbtn" href ="?option=home">Danh sách sản phẩm</a></button>
+		<div class="dropdown">
+			<button><a class="dropbtn" >Sản phẩm theo loại</a></button>
+			<div class="dropdown-content">
+				<?php
+				$query="select*from loaihang where status=1";
+				$loaihang=$connect->query($query);
+				foreach($loaihang as $loaihang1):
+				?>
+				<section class="loaihang"><a href="?option=timkiem&MaLoaiHangid=<?=$loaihang1['MaLoaiHang']?>"><?=$loaihang1['TenLoaiHang']?></a></section>
+				<?php endforeach;?>
+			</div>
+		</div>
+			<button><a class="dropbtn" href ="?option=baiviet">Bài Viết</a></button>
+			<button><a class="dropbtn" href ="?option=giohang">Giỏ hàng</a></button>
+			<button><a class="dropbtn" href ="?option=lienhe">Liên Hệ</a></button>
+		<?php if(empty($_SESSION['khachhang'])): ?>
+			<button><a class="dropbtn" href ="?option=signin">Đăng nhập</a></button><button><a class="dropbtn" href ="?option=register">Register</a></button><nav>
+		<?php else:?>
+			<button><section class="dangnhap"><strong> Xin chào: <span style ="color:blue"><?=$_SESSION['khachhang']?></span> [<a onclick="return confirm('Bạn có muốn đăng xuất?');" href="?option=Logout">Đăng xuất</a>]</strong></section></button>
+		<?php endif;?> -->
+
+</body>
+</html>
